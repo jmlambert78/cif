@@ -98,7 +98,7 @@ caasp4-N105;192.168.100.105/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-nosw
 
 sudo virt-install --connect qemu:///system --virt-type kvm --name caasp4-A100 --memory 4096 --network network=net1  --disk pool=suse,size=20,sparse=true  --location http://192.168.1.20/sle15sp1 --graphics vnc --os-variant sles12sp4  --vcpus 2 -x "netsetup=0 hostip=192.168.100.100/24 nameserver=192.168.100.1 gateway=192.168.100.1 netmask=255.255.255.0 domain=suse hostname=caasp4-a100.suse netwait=3 autoyast=http://192.168.1.20/autoyast/xml/"
 
-sudo virt-install --connect qemu:///system --virt-type kvm --name caasp4-N105 --memory 12384 --network network=net1  --disk pool=suse,size=20,sparse=true  --location http://192.168.1.20/sle15sp1 --graphics vnc --os-variant sles12sp4  --vcpus 2 -x "netsetup=0 hostip=192.168.100.105/24 nameserver=192.168.100.1 gateway=192.168.100.1 netmask=255.255.255.0 domain=suse hostname=caasp4-n105.suse netwait=3 autoyast=http://192.168.1.20/autoyast/xml/"
+sudo virt-install --connect qemu:///system --virt-type kvm --name caasp4-N105 --memory 12384 --network network=net1  --disk pool=suse,size=80,sparse=true  --location http://192.168.1.20/sle15sp1 --graphics vnc --os-variant sles12sp4  --vcpus 2 -x "netsetup=0 hostip=192.168.100.105/24 nameserver=192.168.100.1 gateway=192.168.100.1 netmask=255.255.255.0 domain=suse hostname=caasp4-n105.suse netwait=3 autoyast=http://192.168.1.20/autoyast/xml/"
 - You may ssh to each VM with the root/password set in the CUSTOMER.TXT file.
 
 Open Tasks:
