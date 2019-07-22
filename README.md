@@ -74,6 +74,33 @@ For for alpha to upgrade to sles 15 sp1 this check out on a sles 12 sp3 server:
 
 - curl -Sks http://10.1.1.1/autoyast/upgrade/sles15sp1.sh | /bin/bash
 
+KVM & CIF setup:
+----------------------------------------------
+- You need to have a http server running. Path : /srv/www/htdocs
+- Mount the Various images you need at this path :
+	mount -o loop /home/jmlambert/SLE-15-SP1-Installer-DVD-x86_64-GMC3-DVD1.iso sle15sp1
+	mount -o loop /home/jmlambert/SLE-12-SP4-Server-DVD-x86_64-GM-DVD1.iso sle12sp4
+- Edit the CUSTOMER.TXT file as explained to match your environment (GATEWAY, DNS, Keyboard, SSL, SMT...)
+- Update your autoyast/info-*.txt with the URL of your SMT web server
+- Update/Create your server.txt from the provided one (contains many samples) autoyast/configs/server.txt
+- Example of content
+'#################################################################
+'###     DEVELOPMENT environment                               ###
+'#################################################################
+
+'# CAASP4 Example JML Lab
+caasp4-A100;192.168.100.100/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-50G.xml;soft-sles15caasp4-infra.xml;;;;;;SLES15_DEFAULT
+caasp4-N105;192.168.100.105/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-50G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_DEFAULT
+
+
+- Update the autoyast/xml/default with your SMT URL
+- Assuming that the SMT server is running you may deploy all VMs with Commands : 
+
+sudo virt-install --connect qemu:///system --virt-type kvm --name caasp4-A100 --memory 4096 --network network=net1  --disk pool=suse,size=20,sparse=true  --location http://192.168.1.20/sle15sp1 --graphics vnc --os-variant sles12sp4  --vcpus 2 -x "netsetup=0 hostip=192.168.100.100/24 nameserver=192.168.100.1 gateway=192.168.100.1 netmask=255.255.255.0 domain=suse hostname=caasp4-a100.suse netwait=3 autoyast=http://192.168.1.20/autoyast/xml/"
+
+sudo virt-install --connect qemu:///system --virt-type kvm --name caasp4-N105 --memory 12384 --network network=net1  --disk pool=suse,size=20,sparse=true  --location http://192.168.1.20/sle15sp1 --graphics vnc --os-variant sles12sp4  --vcpus 2 -x "netsetup=0 hostip=192.168.100.105/24 nameserver=192.168.100.1 gateway=192.168.100.1 netmask=255.255.255.0 domain=suse hostname=caasp4-n105.suse netwait=3 autoyast=http://192.168.1.20/autoyast/xml/"
+- You may ssh to each VM with the root/password set in the CUSTOMER.TXT file.
+
 Open Tasks:
 ----------------------------------------------
 - Test EFI
