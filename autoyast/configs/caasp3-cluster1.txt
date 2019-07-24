@@ -34,4 +34,4 @@
 ## Type String
 ## Description: salt master that should be used for salt minion to register to
 ##
-SALT_MASTER="caasp3-admin.suse"
+SALT_MASTER="caasp3a140.jmlzone.com"

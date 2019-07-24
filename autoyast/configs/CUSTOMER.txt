@@ -31,7 +31,7 @@
 
 ## Type String
 ## Description: Customer name; informational only
-CUSTOMER_NAME="SUSE"
+CUSTOMER_NAME="SUSEJML"
 
 ## OES services configuration information
 
@@ -42,6 +42,7 @@ CUSTOMER_NAME="SUSE"
 SLES11_DEFAULT="sles11/bootloader.xml:sles11/ca_mgm.xml:sles11/general.xml:sles11/scripts.xml:sles11/system.xml:sles11/kdump.xml:sles11/net.xml"
 SLES12_DEFAULT="sles12/bootloader.xml:sles12/ca_mgm.xml:sles12/general.xml:sles12/scripts.xml:sles12/system.xml:sles12/kdump.xml:sles12/net.xml"
 SLES15_DEFAULT="sles15/bootloader.xml:sles15/general.xml:sles15/scripts.xml:sles15/system.xml:sles15/kdump.xml:sles15/net.xml"
+SLES15_SWAPACCOUNT="sles15/bootloader-swapaccount.xml:sles15/general.xml:sles15/scripts.xml:sles15/system.xml:sles15/kdump.xml:sles15/net.xml"
 
 CAASP3_ADMIN="caasp3/general-admin.xml:caasp3/scripts-admin.xml:caasp3/net.xml"
 CAASP3_NODE="caasp3/general-node.xml:caasp3/scripts-node.xml:caasp3/net.xml"
@@ -60,23 +61,23 @@ OES2018_ALL="$SLES12_DEFAULT:oes2018/oes_base.xml:oes2018/imanager.xml:oes2018/n
 
 ## Type IP
 ## Description: IP Address of Default Gateway
-GATEWAY="10.1.1.1"
+GATEWAY="192.168.100.1"
 
 ## Type IP
 ## Description: Colon separated list of IP addresses of DNS servers
-NAME_SERVER_LIST="10.1.1.1:192.168.0.31"
+NAME_SERVER_LIST="192.168.100.1:192.168.1.20"
 
 ## Type Custom
 ## Description: Colon separated list of DNS suffixes in the order in which
 ##		they will appear in resolv.conf
 ## 		The first value will be used for general domain name usage
 ##		such as in the email address in CA management
-SUFFIX_SEARCH_LIST="suse"
+SUFFIX_SEARCH_LIST="jmlzone.com"
 
 ## Type IP|DNS
 ## Description: Colon separated list of IP addresses or DNS names of
 ##		NTP servers
-NTP_SERVER_LIST="10.1.1.1:192.168.0.31"
+NTP_SERVER_LIST="fr.pool.ntp.org"
 
 
 ## OES information
@@ -342,7 +343,7 @@ HWCLOCK="UTC"
 
 ## Type String
 ## Description:	YaST-internal identifier of the attached keyboard
-KEYMAP="german"
+KEYMAP="french"
 
 ## Type String
 ## Description:	Language
@@ -355,16 +356,14 @@ LANGUAGE="en_US"
 
 # suse1234
 ROOT_PWD='$6$MFqFb2ql$wjr0b5MwfjMWNrAi/Ala.vQnwKseKYYjQyLRAlWyADKT3fWRRGfCMFz87OeYoER4L0RhMtOBYRS44cM.UqXtx.'
-
+SSH_KEYS="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDbOQebEpckSaJBSXjP2YuG0LLNFz0JEsrgjvkfcQv1ni26LTMZdOAkE09ZFXNfWQaKJLWS7wiDWCvngEXUSOdvtBTkq+KaRxdtQPsScUXbrZolYZTETLTKn2nvzr47BeVUMPvtmYX9APN1JsVUxYOBVxZmcljKulsKp1orx0V5+m2eAGZX8S3t+HAx5XP3kW8iiK9PLCVrtY+iO2grJw+DRW6BA7j4R6dVWQnjEyf6BtIP6ZLdOqnaKTTwk37JRv7KBoP7LMP2D4vA1fAh8oJLn09U5smXjJnqCigwwfm3coewelfxP22DsuAfID0KbMCs34MVBwt+QzUvqr+Fqz4T jmlambert@linuxsles"
 # novell
 #ROOT_PWD='$6$eTocV/T/0xF6$xIRCW5zo7tQJ8zxMqBPEmt59X5m97bS0YwpGj6BBh12G6JJIsF59H3jJLBsgHPSJUbU5bYIUnyqNkrCOhIO78.'
 
 # Type: String
 ## Description: SSH Keys to /root/.ssh/authrized_keys
-SSH_KEYS='ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEA3P7KpLSXnkDfNfvmTkTIdlyPBRzwsHzAL60+Qw3L0U6VEuKFRLS7TTJE8s4XOdt1VxUmvWbBkEcJC8rG/g55leqJyuokZJkoNeRHdVDHT0430WpnmL21xkHl/6fGVxbxPWpwlp1XEWi8/sjvVvrc8LBeri44QMBfG8/3bkFx7zc= mweiss@nbmweiss2
-ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAv1DS2t+Kmh7spHYFg2t0592otcq8YUnZXb17WgkpaWU5cS/2eLZoNbImURkbqpVC54zVwT2dUauJZG/2bXQBul8p2OK0Rgo+Vhhrbmtnvs4GXMfgxRUo3b+zadbMPZzOAxrEWJj8nkg5PV5+5jdxLR6/3ykZtRXn2kvh2/TMHMRpxE7x5xKwyAvXiGMK9kN0dTNEun9KKfNycXX1ZbvfJ02WuzQPA7K3i8eUZZeHlnRXso/66RWsmEPCipNua23wPrBXocsNFx75hvxDFwwvj1rj4SwB9afzcQbvvnLwPheEt8pl30Xozl7qZSVaYllZaEUMcrdklXESKhj87fKDhw== root@weiss-2
-ssh-dss AAAAB3NzaC1kc3MAAAEAdT5oJ5xUOmAnVsElZPaz7yHdbFQsUrXjpAdQfIi3yojeKKSiNVzof9abCb0AhE9X5S8SSqRmuRVCjwqsp6CXDv9Dv+H67F3SDQL5LrXGLO0DR+EUJKDShtLKLiR/8apfOF764PPyRXkMtVQWmqX1uYpwgX8wQsI8ob5TxzQKBa2zkYJtqZ6MI5Ec0LasmFWs+Ur8t+eA+hsbOXY8d5KtK/UHPIRaVZmDfml76fCO4JIbBCKl3xK4xrsMRNbT/PKLet2bES99aj3qiP+4qKMusE0GEMmgva7Af/IZJfzmEUA04GdOuoZxRfiD445bHDMQ4Ys4Hwu5LaWyVIwJLTR97wAAABUAxewlGzIPxys8ouKRQpe8wOk2/fMAAAEAX1Oq3/Z8VXXpx3pMt1HStJmsTeSPyFOi/whnvZPlizR5XV+kQru0vMb0xXFVM0JtBUHnA9PR1GWVAtZMb3JqX5Yxud0EB5Zyr2p23rRa/FeRDKeVO5EdId45rYISb+r5SaQDpzv3giB1ez6dDAAv4QB+mK2tl0C7dasz/tlLSRtCdr3wj2n9JXBDCCBgO4ghLXNCo7b8taFVBi5uYt0B4UyVHae6YgmSXnXczVIelu9mKME/qZCeVQLTD2+okp9m+6Ucae2Z7HLMpwS0/kzGLD02QFNpOH1KScT9aHAG33CTHNn/C9Hp94Ez/kcd3khdNoF4i1e3JgJyqwVYbnAsjAAAAQASPq4iX3dNvN8v0eVbqN5mq/TRYXjmaZtZppzPBHBzirqkJAZ4nJa5o/fZWVgcnHWTXu14eRksQp1o/1aCnPPb9ebHe1ZYUkI2fnoeSaO3j2sbaaS10Qu9lobXPTXqVDPWHaGMMQq0jEEbYod4nJxyh1nhqDUFqOW7xqOY9jIZQmlV8aIpAhtGt/OccJT9rWtk6f8tyn2n3c1lzqSfeop7BjiJ8BOJfuyhY2d28PNngqwGmc6S+XOX4+/0KKOT5MkwRTQuOHVuBFDIOJGmAhp31I5+YLDWvxTopXzlHo5boshUVL+p/DBlVpn50KP2OG3phD65GzQk8eIJj/YCtpXw dsa-key-20060804
-'
+#SSH_KEYS='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDbOQebEpckSaJBSXjP2YuG0LLNFz0JEsrgjvkfcQv1ni26LTMZdOAkE09ZFXNfWQaKJLWS7wiDWCvngEXUSOdvtBTkq+KaRxdtQPsScUXbrZolYZTETLTKn2nvzr47BeVUMPvtmYX9APN1JsVUxYOBVxZmcljKulsKp1orx0V5+m2eAGZX8S3t+HAx5XP3kW8iiK9PLCVrtY+iO2grJw+DRW6BA7j4R6dVWQnjEyf6BtIP6ZLdOqnaKTTwk37JRv7KBoP7LMP2D4vA1fAh8oJLn09U5smXjJnqCigwwfm3coewelfxP22DsuAfID0KbMCs34MVBwt+QzUvqr+Fqz4T jmlambert@linuxsles'
+
 
 ## Type String
 ## Description:	Time Zone
@@ -385,7 +384,7 @@ UPDATE_SYSTEM="smt"
 ## Type URL
 ## Description: Protocol (ftp|http|nfs|smb|...) and DNS name or IP address of
 ##		the SMT server
-SMT_SERVER="http://smt.suse"
+SMT_SERVER="http://192.168.100.130"
 
 ## Type URL
 ## Description: URL to the SMT client configuration script
