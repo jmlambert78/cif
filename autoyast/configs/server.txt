@@ -78,9 +78,9 @@
 
 # CAASP4 Example JML Lab
 caasp4-A100;192.168.100.100/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-50G.xml;soft-sles15caasp4-infra.xml;;;;;;SLES15_DEFAULT
-caasp4-N105;192.168.100.105/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-50G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_SWAPACCOUNT
-caasp4-N110;192.168.100.110/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-50G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_SWAPACCOUNT
-caasp4-N111;192.168.100.111/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-50G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_SWAPACCOUNT
+caasp4-N105;192.168.100.105/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-50G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_CAASPV4
+caasp4-N110;192.168.100.110/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-50G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_CAASPV4
+caasp4-N111;192.168.100.111/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-50G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_CAASPV4
 
 # CAASP 3 Example
 caasp3a140;192.168.100.140/24;192.168.100.1;caasp3;/dev/vda;;part-caasp3-gpt-50G.xml;soft-caasp3.xml;;;;;caasp3-cluster1.txt;CAASP3_ADMIN
