@@ -77,10 +77,14 @@
 #################################################################
 
 # CAASP4 Example JML Lab
-caasp4-A100;192.168.100.140/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-50G.xml;soft-sles15caasp4-infra.xml;;;;;;SLES15_DEFAULT
-caasp4-N105;192.168.100.141/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-50G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_CAASPV4_SWAP
-caasp4-N110;192.168.100.142/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-50G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_CAASPV4_SWAP
-caasp4-N111;192.168.100.143/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-50G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_CAASPV4_SWAP
+caasp4-A140;192.168.100.140/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-50G.xml;soft-sles15caasp4-infra.xml;;;;;;SLES15_DEFAULT
+caasp4-N141;192.168.100.141/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-50G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_CAASPV4_SWAP
+caasp4-N142;192.168.100.142/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-100G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_CAASPV4_SWAP
+caasp4-N143;192.168.100.143/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-100G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_CAASPV4_SWAP
+#CaaSP4 alone small
+caasp4-N151;192.168.100.151/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-100G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_CAASPV4_SWAP
+caasp4-N152;192.168.100.152/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-noswap-100G.xml;soft-sles15caasp4-node.xml;;;;;;SLES15_CAASPV4_SWAP
+
 
 # CAASP 3 Example
 caasp3a140;192.168.100.150/24;192.168.100.1;caasp3;/dev/vda;;part-caasp3-gpt-50G.xml;soft-caasp3.xml;;;;;caasp3-cluster1.txt;CAASP3_ADMIN
@@ -89,7 +93,7 @@ caasp3n142;192.168.100.152/24;192.168.100.1;caasp3;/dev/vda;;part-caasp3-50G.xml
 caasp3n143;192.168.100.153/24;192.168.100.1;caasp3;/dev/vda;;part-caasp3-50G.xml;soft-caasp3.xml;;;;;caasp3-cluster1.txt;CAASP3_NODE
 caasp3n144;192.168.100.154/24;192.168.100.1;caasp3;/dev/vda;;part-caasp3-50G.xml;soft-caasp3.xml;;;;;caasp3-cluster1.txt;CAASP3_NODE
 
-
+sles12sp4;192.168.100.104/24;192.168.100.1;sles12sp4;/dev/vda;;part-sles12-btrfs-50G.xml;soft-sles12.xml;;;;;;SLES12_DEFAULT
 
 
 #################################################################
