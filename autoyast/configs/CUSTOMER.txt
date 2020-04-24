@@ -382,7 +382,8 @@ TIME_ZONE="Europe/Berlin"
 
 ## Type List	(smt, suma, zcm)
 ## Description: Type of system used for software updates
-UPDATE_SYSTEM="smt"
+#UPDATE_SYSTEM="smt" # JML 2204
+UPDATE_SYSTEM="suma"
 
 ## Type URL
 ## Description: Protocol (ftp|http|nfs|smb|...) and DNS name or IP address of
@@ -433,12 +434,12 @@ YUM_SERVER="$SMT_SERVER"
 
 ## Type String
 ## Description: Suse Manager Server (Hostname or IP address)
-#SUMA_SERVER="http://10.1.1.1"
+SUMA_SERVER="http://192.168.100.160"
 
 ## Type URL/Path
 ## Description:	URL-Path to Suse Manager Bootstrap script
-#SUMA_BOOTSTRAP_FILE="/pub/bootstrap/bootstrap.sh"
+SUMA_BOOTSTRAP_FILE="/pub/bootstrap/bootstrap.sh"
 
 ## Type URL
 ## Description: Full URL to the Suse Manager Bootstrap script
-#SUMA_BOOTSTRAP_URL="${SUMA_SERVER}${SUMA_BOOTSTRAP_FILE}"
+SUMA_BOOTSTRAP_URL="${SUMA_SERVER}${SUMA_BOOTSTRAP_FILE}"
