@@ -74,6 +74,7 @@ For for alpha to upgrade to sles 15 sp1 this check out on a sles 12 sp3 server:
 
 - curl -Sks http://10.1.1.1/autoyast/upgrade/sles15sp1.sh | /bin/bash
 
+Logs in /var/adm/autoinstall/
 Open Tasks:
 ----------------------------------------------
 - Test EFI
