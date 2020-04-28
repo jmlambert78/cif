@@ -52,7 +52,7 @@ Adjust autoyast/info-<os>.txt file to your autoyast and iso server
 
 Adjust BOOT_CD: /data/boot_cd_build/grub/*.lst and /data/boot_cd_build/grub2.cfg
 
-Copy initrd linux to boot cd kernel sub-directories
+Copy initrd linux to boot cd kernel sub-directories (FROM SLES ISO )
 
 Adjust paths in create-ay-cd-v01.sh
 
