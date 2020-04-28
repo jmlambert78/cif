@@ -94,10 +94,9 @@ caasp3n143;192.168.100.153/24;192.168.100.1;caasp3;/dev/vda;;part-caasp3-50G.xml
 caasp3n144;192.168.100.154/24;192.168.100.1;caasp3;/dev/vda;;part-caasp3-50G.xml;soft-caasp3.xml;;;;;caasp3-cluster1.txt;CAASP3_NODE
 
 suma;192.168.100.160/24;;sles15sp1;/dev/vda;/dev/vdb;part-sles12-btrfs-noswap-50G-100G.xml;soft-sles15.xml;;;;;;SLES15_DEFAULT
-vm-105;192.168.100.105/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-50G.xml;soft-sles15.xml;;;;;;SLES15_DEFAULT
 vm-103;192.168.100.103/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-50G.xml;soft-sles15.xml;1-bf420dff47f37a1e1c790312d1b78add;;;;;SLES15_DEFAULT
-
-vm-104;192.168.100.104/24;;sles12sp4;/dev/vda;;part-sles12-btrfs-50G.xml;soft-sles12.xml;1-d25399e4e107433c495a9fad4423576a;;;;;SLES12_DEFAULT
+vm-104;192.168.100.104/24;;sles12sp4;/dev/vda;;part-sles12-btrfs-50G.xml;soft-sles12.xml;1-9c8d5299a28d1730e47a2fff1a86a472;;;;;SLES12_DEFAULT
+vm-105;192.168.100.105/24;;sles15sp1caasp4;/dev/vda;;part-sles12-btrfs-50G.xml;soft-sles15.xml;;;;;;SLES15_DEFAULT
 
 #################################################################
 ###        TEST environment                                   ###

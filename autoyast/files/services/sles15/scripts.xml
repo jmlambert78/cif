@@ -43,12 +43,6 @@ fi
         <location>%%AY_SERVER%%/%%PREFIX%%/scripts/ssh-keys.sh</location>
       </listentry>
       <listentry>
-        <!-- Install ZCM agent -->
-        <filename>zcm-install.sh</filename>
-        <interpreter>shell</interpreter>
-        <location>%%AY_SERVER%%/%%PREFIX%%/scripts/zcm-install.sh</location>
-      </listentry>
-      <listentry>
         <!-- Install SUMA agent -->
         <filename>suma-bootstrap.sh</filename>
         <interpreter>shell</interpreter>
